@@ -1,0 +1,68 @@
+﻿<Window x:Class="DemExam2023.Views.PDFWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemExam2023.Views"
+        mc:Ignorable="d"
+        Title="Талон" Height="600" Width="500"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        FontSize="20">
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical"
+                    Margin="10">
+
+            <TextBlock x:Name="IdTextBlock"
+                       TextWrapping="Wrap"/>
+
+            <TextBlock x:Name="DateTextBlock"
+                       TextWrapping="Wrap"/>
+
+            <TextBlock x:Name="PointTextBlock"
+                       TextWrapping="Wrap"/>
+            
+            <TextBlock x:Name="UserTextBlock"
+                       TextWrapping="Wrap"/>
+
+            <TextBlock x:Name="PaymentAmountTextBlock"
+                       TextWrapping="Wrap"/>
+
+            <TextBlock Text="Состав заказа:"
+                       TextWrapping="Wrap"/>
+
+            <ListView x:Name="ProductsList">
+
+                <ListView.ItemTemplate>
+
+                    <ItemContainerTemplate>
+
+                        <StackPanel>
+
+                            <TextBlock Text="{Binding Title, StringFormat=Товар: {0}}"/>
+                            <TextBlock Text="{Binding Cost, StringFormat=Цена: {0:c}, ConverterCulture=ru-RU}"/>
+
+                        </StackPanel>
+
+                    </ItemContainerTemplate>
+                    
+                </ListView.ItemTemplate>
+                
+            </ListView>
+
+        </StackPanel>
+
+        <TextBlock Grid.Row="1"
+                   HorizontalAlignment="Center"
+                   x:Name="CodeTextBlock"/>
+
+    </Grid>
+    
+</Window>

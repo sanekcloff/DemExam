@@ -1,0 +1,43 @@
+﻿<Window x:Class="DemExam2023.Views.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemExam2023.Views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="AuthorizationWindow" 
+        Height="450" 
+        Width="400"
+        FontSize="14">
+
+    <StackPanel VerticalAlignment="Center">
+
+        <TextBlock Text="Логин"
+                   HorizontalAlignment="Center"
+                   Margin="5"/>
+
+        <TextBox HorizontalContentAlignment="Center"
+                 Margin="5"
+                 Width="250"
+                 x:Name="LoginTextBox"/>
+
+        <TextBlock Text="Пароль"
+                   HorizontalAlignment="Center"
+                   Margin="5"/>
+
+        <TextBox HorizontalContentAlignment="Center"
+                 Margin="5"
+                 Width="250"
+                 x:Name="PasswordTextBox"/>
+
+        <Button x:Name="AuthorizationButton"
+                Click="AuthorizationButton_Click"
+                Width="250"
+                Margin="5"
+                Content="Авторизация"/>
+
+    </StackPanel>
+    
+</Window>
